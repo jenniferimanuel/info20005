@@ -2,21 +2,19 @@
 <html lang="en">
     <head> 
         <meta charset="UTF-8">
-        <meta name="viewport" content=""width=device-width, initial-scale="1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Midsummer Night's Dream</title>
-
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="pyjama-style.css"/>
     </head>
 
     <body>
         <!--left top header, desktop view-->
         <header class="site-header">
             <nav class="nav-links">
-                <a href="#pyjama-collections" >PYJAMAS</a>
-                <a href="#sets" >SETS</a>
-                <a href="#robes" >ROBES</a>
-                <a href="#night-dresses" >NIGHT DRESSES</a>
-                <a href="#sale" >SALE</a>
+                <a href="sets.html" >SETS</a>
+                <a href="robes.html" >ROBES</a>
+                <a href="night-dresses.html" >NIGHT DRESSES</a>
+                <a href="sale.html" >SALE</a>
             </nav>
 
         <!--search bar group-->
@@ -28,7 +26,7 @@
             </form>
          </div>
 
-        <!--header on the top right-->
+        <!--HEADER on the TOP RIGHT-->
         <!--favourite-->
          <div class="header-icons">
             <button type="button" class="icon-btn">
@@ -47,33 +45,33 @@
             <section class="hero">
                 <div class="hero-content">
                     <h1>Midsummer<br>Night's Dream</h1>
-                    <a href="hero-image.jpg" class="shop-button">SHOP NOW</a>
+                    <a href="products.html" class="shop-button">SHOP NOW</a>
                 </div>
             </section>
 
-            <!--collections-->
+            <!--COLLECTIONS-->
             <section id="pyjama-collections" class="collections">
                 <h2>Collections</h2>
                 <!--Sets-->
                 <div class="collection-row">
                     <div id="sets" class="collection-card">
                         <img src="assets/sets-collection.jpg" alt="sets collection">
-                        <a href="#products">SETS</a>
+                        <a href="sets.html">SETS</a>
                     </div>
                 <!--Robes-->
                 <div id="robes" class="collection-card">
                     <img src="assets/robe-collection.jpg" alt="robes collection">
-                    <a href="#products">ROBES</a>
+                    <a href="robes.html">ROBES</a>
                 </div>
                 <!--Night-Dresses-->
                 <div id="night-dresses" class="collection-card">
                     <img src="assets/nightdress-collection.jpg" alt="night dresses collection">
-                    <a href="#products">NIGHT DRESSES</a>
+                    <a href="night-dresses.html">NIGHT DRESSES</a>
                 </div>
                 <!--Sale-->
                 <div id="sale" class="collection-card">
                     <img src="assets/sale-collection.jpg" alt="sale collection">
-                    <a href="#products">SALE</a>
+                    <a href="sale.html">SALE</a>
                 </div>
                 </div>
             </section>
@@ -83,45 +81,55 @@
                 <h2>Products</h2>
 
                 <div class="product-row">
-                    <div class="product-card">
-                        <img src="/Users/jenniferimanuel/Downloads/UniMelb/Year 2 -2/INFO20005/Project 3/assets/set/white button up long-set.jpg" alt="White Button Up Long Pyjama Set">
+                    <div class="product-card" data-name="white button up long pyjama set"> <!--data name: for search bar js later-->
+                        <img src="assets/set/white-button-up-long-set.jpg" alt="White Button Up Long Pyjama Set">
                         <div class="product-info">
-                            <p>White Button Up Long Pyjama Set</p>
+                            <p>White Button Up Set</p>
                             <p>$110</p>
                         </div>
                     </div>
-
-                    <div class="product-card">
-                        <img src="/Users/jenniferimanuel/Downloads/UniMelb/Year 2 -2/INFO20005/Project 3/assets/set/libra zodiac set.jpg" alt="Libra Zodiac Short Pajama Set">
+                    
+                    <div class="product-card" data-name="libra zodiac print short pyjama set">
+                        <img src="assets/set/libra-zodiac-set.jpg" alt="Libra Zodiac Short Pyjama Set">
                         <div class="product-info">
-                            <p>Libra Zodiac Pajama Set</p>
+                            <p>Libra Zodiac Set</p>
                             <p>$89</p>
                         </div>
                     </div>
 
-                     <div class="product-card">
-                        <img src="/Users/jenniferimanuel/Downloads/UniMelb/Year 2 -2/INFO20005/Project 3/assets/night dress/silk lace slip-night dress.jpg" alt="Silk Lace Slip Night Dress">
+                    <div class="product-card" data-name="blue midi strap night dress pyjama">
+                        <img src="assets/night-dress/blue-midi-strap-night-dress.jpg" alt="Blue Midi Strap Dress">
                         <div class="product-info">
-                            <p>Silk Lace Slip Night Dress</p>
+                            <p>Silk Lace Blue Strap Dress</p>
                             <p>$76</p>
                         </div>
                     </div>
 
-                    <div class="product-card">
-                        <img src="/Users/jenniferimanuel/Downloads/UniMelb/Year 2 -2/INFO20005/Project 3/assets/robe/kimono-robe.jpg" alt="Kimono Yellow Robe">
+                     <div class="product-card" data-name="slik lace slip blue night dress pyjama">
+                        <img src="assets/night-dress/silk-lace-slip-night-dress.jpg" alt="Silk Lace Slip Night Dress">
+                        <div class="product-info">
+                            <p>Silk Lace Slip Dress</p>
+                            <p>$76</p>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-name="kimono yellow robe pyjama">
+                        <img src="assets/robe/kimono-robe.jpg" alt="Kimono Yellow Robe">
                         <div class="product-info">
                             <p>Kimono Yellow Robe</p>
                             <p>$120</p>
                         </div>
                     </div>
-
                 </div>
             </section>
+
 
         </main>
 
         <footer>
             <p>2026 Midsummer Night's Dream</p>
         </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>
