@@ -1,5 +1,6 @@
-// script for the SEARCH BAR
+//SEARCH BAR
 //search input, select all product cards
+function searchResult () {
 const searchInput = document.getElementById("searchInput");
 const products = document.querySelectorAll(".product-card");
 const form= document.querySelector(".search-form")
@@ -21,3 +22,4 @@ searchInput.addEventListener ("keyup", function() {
         else {product.style.display = "none";}
     });
 });
+}
