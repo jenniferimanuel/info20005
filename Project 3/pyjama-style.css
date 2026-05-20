@@ -185,7 +185,7 @@ body {
 }
 
 .product-card {
-    width: 150px;
+    width: 170px;
 }
 .product-card img {
     width: 100%;
@@ -236,7 +236,7 @@ footer {
 .old-price{
     text-decoration: line-through;
     color:#8c4251;
-    font-size: 10px
+    font-size: 10px;
 }
 .sale-price {
     color:red;
