@@ -65,7 +65,14 @@ body {
     background-color: white;
 }
 
-.search-icon {
+.search-button { /* remove border from the button */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-button img {
     width: 18px;
     margin-right: 10px;
 }
