@@ -1,21 +1,23 @@
 //SEARCH BAR
-    //search bar function
-    const searchInput = document.getElementById("searchInput");
-    const products = query.SelectorAll(".product-card");
-    const form = document.querySelector(".search-form");
-    //error prevention: to stop page from refreshing when search button clicked
-    if (form){
-        form.addEventListener("keyup", function () {
-        const value = searchInput.value.toLowerCase();
+        const params = new URLSearchParams(window.location.search);
+        const searchQuery = params.get("search");
         
-        products.forEach(function(product) {
-            const productName = product.dataset.name.toLowerCase();
+        const products = document.querySelectorAll(".product-card");
 
-            if (productName.includes(value)) {
-                product.style.display = "block";
+        if (searchQuery && products.length > 0) {
+            const value = searchQuery.toLowerCase();
+
+            products.forEach(function(product) {
+                    const productName = product.dataset.name.toLowerCase();
+
+                if (productName.includes(value)){
+                    product.style.display = "block";
             } else {
                 product.style.display = "none";
             }
         });
-        });
-    }
+     }
+
+     button.addEventListener("click", function() {
+        alert("clicked");
+     });
