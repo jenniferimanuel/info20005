@@ -1,25 +1,21 @@
 //SEARCH BAR
-//search input, select all product cards
-function searchResult () {
-const searchInput = document.getElementById("searchInput");
-const products = document.querySelectorAll(".product-card");
-const form= document.querySelector(".search-form")
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-});
+    //search bar function
+    const searchInput = document.getElementById("searchInput");
+    const products = query.SelectorAll(".product-card");
+    const form = document.querySelector(".search-form");
+    //error prevention: to stop page from refreshing when search button clicked
+    if (form){
+        form.addEventListener("keyup", function () {
+        const value = searchInput.value.toLowerCase();
+        
+        products.forEach(function(product) {
+            const productName = product.dataset.name.toLowerCase();
 
-searchInput.addEventListener ("keyup", function() {
-//so it's not case sensitive
-    const value = searchInput.value.toLowerCase();
-    
-    //loop through every product
-    products.forEach (function(product) {
-        //get product keyword
-        const productName = product.dataset.name.toLowerCase();
-        //check value if it matches
-        if (productName.includes(value)){
-            product.style.display = "block";}
-        else {product.style.display = "none";}
-    });
-});
-}
+            if (productName.includes(value)) {
+                product.style.display = "block";
+            } else {
+                product.style.display = "none";
+            }
+        });
+        });
+    }
