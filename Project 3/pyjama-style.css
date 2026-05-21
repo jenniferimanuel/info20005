@@ -240,6 +240,7 @@ width: 170px;
 .product-cart-btn img {
     width: 22px;
     height: 22px;
+    filter: contrast(400%);
 }
 
 .product-image-box > img{

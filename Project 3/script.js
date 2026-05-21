@@ -1,4 +1,4 @@
-//SEARCH BAR
+// SEARCH BAR
         const params = new URLSearchParams(window.location.search);
         const searchQuery = params.get("search");
         
@@ -22,4 +22,4 @@
         alert("clicked");
      });
 
-//
+// making the PRODUCT CARDs CLICKable
