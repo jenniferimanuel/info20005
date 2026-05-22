@@ -8,9 +8,13 @@
     </head>
 
     <body>
-        <!--left top header, desktop view-->
-        <header class="site-header">
-            <nav class="nav-links">
+        
+        <!--HOME, left top header, desktop view-->
+       <header class="site-header">
+        <nav class="nav-links">
+            <a href="index.html"> <img src="assets/home.png" alt="Home">
+            </a>
+
                 <a href="sets.html" >SETS</a>
                 <span>|</span>
                 <a href="robes.html" >ROBES</a>
@@ -44,12 +48,54 @@
         </header>
 
         <main class="product-detail-page">
+            <div class="product-detail-container">
+
             <div class="product-detail-image">
                 <img src="assets/set/white-button-up-long-set.jpg" alt="white button up set">
-            </div>
+           </div>
 
             <!--PRODUCT INFO-->
-            <h1> White Button Up Set</h1>
+            <div class="product-detail-info">
+                <h1> White Button Up Set</h1>
+
+            <p class="product-price">$110</p>
+
+                <!--Size-->
+                <div class="size-section">
+                        <p>Size</p>
+                    
+                    <div class="size-options">
+                        <button type="button">XS</button>
+                        <button type="button">S</button>
+                        <button type="button">M</button>
+                        <button type="button">L</button>
+                        <button type="button">XL</button>
+                    </div>
+                </div>
+
+                <!--Quantity-->
+                <div class="quantity-box">
+                    <button type="button">-</button>
+                    <span id="quantity-value">1</span>
+                    <button type="button">+</button>
+                </div>
+
+                <!--Add to Cart Button-->
+                <button class="add-to-cart-button">ADD TO CART</button>
+
+                <!--Description-->
+                <div class="product-description">
+                <h3>Description</h3>
+                <p>A soft button-up long pyjama set designed for comfort and relaxed sleepwear styling.</p>
+                </div>
+                <!--Shipping Info-->
+                <div class="shipping-info">
+                <h3>Shipping & Returns</h3>
+                <p>Standard shipping available. Returns accepted within 14 days if the product is unworn.</p>
+                </div>
+
+                </div>
+                
         </main>
 
     </body>
