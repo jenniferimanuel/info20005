@@ -23,6 +23,11 @@
 const addToCartButton = document.querySelector(".add-to-cart-button");
 if (addToCartButton) {
     addToCartButton.addEventListener("click", function () {
+        //adding user error prevention
+        if (selectedSize ==="") {
+            alert("Please choose a size first.");
+            return;
+        }
         const product = {
             name: addToCartButton.dataset.name,
             price: Number(addToCartButton.dataset.price),
