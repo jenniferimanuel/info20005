@@ -27,7 +27,8 @@ if (addToCartButton) {
             name: addToCartButton.dataset.name,
             price: Number(addToCartButton.dataset.price),
             image: addToCartButton.dataset.image,
-            quantity: Number(document.getElementById("quantity-value").textContent)
+            quantity: Number(document.getElementById("quantity-value").textContent),
+            size: selectedSize
         };
         //save product into local storage
         localStorage.setItem("cartItem",JSON.stringify(product));
@@ -41,6 +42,7 @@ if (cartItem && document.getElementById("cart-name")){
     document.getElementById("cart-image").src=cartItem.image;
     document.getElementById("cart-name").textContent=cartItem.name;
     document.getElementById("cart-price").textContent="$" + cartItem.price;
+    document.getElementById("cart-size").textContent = "Size: " + cartItem.size;
     document.getElementById("cart-quantity-value").textContent= cartItem.quantity;
     document.getElementById("cart-subtotal").textContent="$" + (cartItem.price * cartItem.quantity);
 }
@@ -64,3 +66,16 @@ if (minusBtn && plusBtn && quantityValue) {
         quantityValue.textContent = quantity;
     });
 }
+
+// Size Buttons: choosing size 
+const sizeButtons = document.querySelectorAll(".size-btn");
+let selectedSize = "";
+sizeButtons.forEach(function(button){
+  button.addEventListener("click", function (){
+    sizeButtons.forEach(function(btn){
+        btn.classList.remove("selected");
+    });
+    button.classList.add("selected");
+    selectedSize = button.textContent;
+  });
+});

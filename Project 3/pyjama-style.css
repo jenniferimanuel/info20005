@@ -343,6 +343,11 @@ footer {
     cursor: pointer;
 }
 
+.size-btn.selected{
+    background-color:#8c4251;
+    color: white;
+}
+
 .quantity-box {
     display: flex;
     align-items: center;
