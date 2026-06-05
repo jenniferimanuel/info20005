@@ -49,7 +49,49 @@
         </header>
 
         <!--SHOPPING CART-->
-        <main class="shopping-cart=page">
+        <main class="shopping-cart-page">
             <h1>Shopping Cart</h1>
-            <div class="cart-container"></div>
+            <div class="cart-container">
+
+            <!-- the LEFT side-->
+             <div class="cart-items">
+                <div class="cart-item-card">
+                    <!--product image-->
+                    <img id="cart-image" src="" alt="Cart Product">
+                    <!--product info-->
+                    <div class="cart-item-info">
+                        <h2 id="cart-name"></h2>
+                        <p id="cart-price"></p>
+
+
+                    <!--quantity-->
+                    <div class="cart-quantity">
+                        <button type="button">-</button>
+                        <span id="cart-quantity-value"></span>
+                        <button type="button">+</button>
+                    </div>
+
+                    </div>
+                </div>
+             </div>
+
+             <!--the RIGHT side-->
+             <div class="cart-summary">
+                <h2>Summary</h2>
+                <div class="summary-box">
+
+                    <div class="summary-row">
+                        <p>Subtotal</p>
+
+                        <p id="cart-subtotal"></p>
+                    </div>
+                </div>
+                <!--checkout button-->
+                <a href="checkout.html" class="checkout-button">Checkout</a>
+             </div>
+             </div>
+
         </main>
+
+        <script src="script.js"></script>
+        </body>

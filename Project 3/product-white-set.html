@@ -44,7 +44,7 @@
             <a href="shopping-cart.html" class="icon-btn">
                 <img src="assets/cart.png" alt="cart">
             </a>
-            
+
          </div>
         </header>
 
@@ -76,13 +76,17 @@
 
                 <!--Quantity-->
                 <div class="quantity-box">
-                    <button type="button">-</button>
+                    <button type="button" id="minus-btn">-</button>
                     <span id="quantity-value">1</span>
-                    <button type="button">+</button>
+                    <button type="button" id="plus-btn">+</button>
                 </div>
 
                 <!--Add to Cart Button-->
-                <button class="add-to-cart-button">ADD TO CART</button>
+                <button 
+                class="add-to-cart-button"
+                data-name="White Button Up Set"
+                data-price="110"
+                data-image="assets/set/white-button-up-long-set">ADD TO CART</button>
 
                 <!--Description-->
                 <div class="product-description">
@@ -96,9 +100,9 @@
                 </div>
 
                 </div>
-                
         </main>
-
+        
+    <script src="script.js"></script>
     </body>
 
 </html>
