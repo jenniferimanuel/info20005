@@ -451,7 +451,7 @@ footer {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 40px;
-    align-items: start;
+    align-items: stretch;
 }
 
 /* left cart box */
@@ -531,15 +531,34 @@ footer {
 
 .checkout-button {
     display: block;
-    width: 220px;
-    margin: 25px 0 0 auto;
-    padding: 10px 0;
+    width: 100%;
+    padding: 18px;
 
-    border: 1.5px solid var(--light-purple);
-    border-radius: 25px;
+   background-color: #6e1728;
+   color: white;
+   border: none;
+   text-align: center;
+   text-decoration: none;
+   font-size: 24px;
+   font-weight: 600;
+   margin-top: 40px;
+}
 
-    text-align: center;
-    text-decoration: none;
-    color: var(--dark-purple);
-    font-weight: bold;
+.cart-price {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#cart-subtotal {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#cart-name {
+    margin-bottom: 20px;
+}
+
+#cart-size {
+    margin-bottom: 15px;
 }
