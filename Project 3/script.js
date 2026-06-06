@@ -142,3 +142,79 @@ if (minusBtn && plusBtn && quantityValue) {
     });
 }
 
+//CHECKOUT summary
+const checkoutItems = document.getElementById("checkout-items");
+const checkoutTotal = document.getElementById("checkout-total");
+
+if (checkoutItems && checkoutTotal) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let total = 0;
+    checkoutItems.innerHTML = "";
+
+    cart.forEach(function(item) {
+        total = total + item.price * item.quantity;
+
+        checkoutItems.innerHTML += `
+            <div class="checkout-item">
+                <p>${item.name}</p>
+                <p>$${item.price * item.quantity}</p>
+            </div>
+        `;
+    });
+    checkoutTotal.textContent = "$" + total;
+}
+
+//fill in container on CHECKOUT page, to prevent user error
+
+const confirmBtn = document.getElementById("confirm-order");
+
+if (confirmBtn) {
+    confirmBtn.addEventListener("click", function (e) {
+        e.preventDefault ();
+
+        const fullName = document.getElementById("full-name").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const city = document.getElementById("city").value.trim();
+        const postcode = document.getElementById("postcode").value.trim();
+
+        const cardholder = document.getElementById("cardholder-name").value.trim();
+        const cardNumber = document.getElementById("card-number").value.trim();
+        const expiryDate = document.getElementById("expiry-date").value.trim();
+        const cvc = document.getElementById("cvc").value.trim();
+
+        if (
+            !fullName ||
+            !address ||
+            !city ||
+            !postcode ||
+            !cardholder ||
+            !cardNumber ||
+            !expiryDate ||
+            !cvc
+        ) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        //card number = exactly 16 digit
+        if (!/^\d{16}$/.test(cardNumber)) {
+            alert("Card number must be 16 digits.");
+            return;
+        }
+
+        //CVC = exactly 3 digits
+        if (!/^\d{3}$/.test(cvc)) {
+            alert("CVC must be exactly 3 digits.");
+            return;
+        }
+
+        //Expiry Date = MM/YY
+        if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiryDate)){
+            alert("Expiry date must be in MM/YY format.");
+            return;
+        }
+        //Success
+        window.location.href = "confirmed.html";
+    });
+}

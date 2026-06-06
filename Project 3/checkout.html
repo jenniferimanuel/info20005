@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Checkout</title>
+        <link rel="stylesheet" href="pyjama-style.css"/>
+    </head>
+
+    <body>
+        <!--HOME, left top header, desktop view-->
+       <header class="site-header">
+        <nav class="nav-links">
+            <a href="index.html"> <img src="assets/home.png" alt="Home">
+            </a>
+
+                <a href="sets.html" >SETS</a>
+                <span>|</span>
+                <a href="robes.html" >ROBES</a>
+                <span>|</span>
+                <a href="night-dresses.html" >NIGHT DRESSES</a>
+                <span>|</span>
+                <a href="sale.html" >SALE</a>
+            </nav>
+
+        <!--search bar group-->
+         <div class="search-container">
+            <form class="search-form" action="products.html" method="get">
+                <input type="text" id="searchInput" placeholder="Search..." name="search" >
+                <button type="submit" class="search-button">
+                    <img src="assets/search-icon.png" alt="Search">
+                </button>
+            </form>
+         </div>
+
+        <!--HEADER on the TOP RIGHT-->
+        <!--favourite-->
+         <div class="header-icons">
+            <button type="button" class="icon-btn">
+                <img src="assets/favorite.png" alt="favourites">
+            </button>
+        <!--cart-->
+            <a href="shopping-cart.html" class="icon-btn">
+                <img src="assets/cart.png" alt="cart">
+            </a>
+            
+         </div>
+         
+        <header class="checkout-page">
+            <div class="checkout-container">
+
+                <!-- left side -->
+                 <section class="checkout-form-section">
+                    <div class="checkout-top-row">
+                        <h2>Shipping Method</h2>
+
+                        <select class="shipping-select">
+                            <option>Standard Delivery</option>
+                            <option>Express Delivery</option>
+                        </select>
+                    </div>
+
+                    <h2> Delivery Address</h2>
+
+                    <div class="checkout-box">
+                        <input type="text" id="full-name" placeholder="Full Name">
+                        <input type="text" id="address" placeholder="Address">
+                        <div class="input-row">
+                            <input type="text" id="city" placeholder="City">
+                            <input type="text" id="postcode" placeholder="Postcode (1234)">
+                        </div>
+                    </div>
+
+                     <h2> Payment Details</h2>
+
+                    <div class="checkout-box">
+                        <input type="text" id="cardholder-name" placeholder="Cardholder Name">
+                        <input type="text" id="card-number" placeholder="Card Number (1234 5678 9012)" maxlength="16">
+                        <div class="input-row">
+                            <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5">
+                            <input type="text" id="cvc" placeholder="CVC (123)" maxlength="3">
+                        </div>
+
+                    </div>
+                 </section>
+
+                 <!-- right side -->
+                  <section class="checkout-summary">
+                    <h2>Summary</h2>
+
+                    <div class="checkout-summary-box">
+                        <div id="checkout-items"></div>
+
+                        <div class="summary-row">
+                            <strong>Total</strong>
+                            <strong id="checkout-total"></strong>
+                        </div>
+                    </div>
+
+                    <button type="button" id="confirm-order" class="confirm-button">
+                        Confirm
+                    </button>
+                  </section>
+            </div>
+        </header>
+
+        <main class="checkout-page">
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
