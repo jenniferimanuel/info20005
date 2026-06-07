@@ -336,3 +336,19 @@ if(favouritesList) {
             localStorage.setItem("favourites", JSON.stringify(favourites));
             location.reload();
         }
+
+//adding COUNT badge to CART
+const cartCount = document.getElementById("cart-count");
+
+if(cartCount) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cartCount.textContent = cart.length;
+}
+
+//adding COUNT badge to FAVOURITES
+const favouriteCount = document.getElementById("favourites-count");
+
+if(favouriteCount) {
+    const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+    favouriteCount.textContent = favourites.length;
+}
