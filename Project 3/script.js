@@ -257,3 +257,62 @@ if(confirmedItems && confirmedTotal) {
 });
 confirmedTotal.textContent = "$" + total;
 }
+
+// ADDING products to FAVOURITES
+const favouriteButtons = document.querySelectorAll(".favorite-btn");
+favouriteButtons.forEach(function(button) {
+    
+    button.addEventListener("click", function(event) {
+        event.preventDefault();
+        const favouriteProduct = {
+            name: button.dataset.name,
+            price:button.dataset.image,
+            link: button.dataset.link
+        };
+
+        let favourites =
+        JSON.parse(localStorage.getItem("favourites")) || [];
+
+        const exists = favourites.some(function(item) {
+            return item.name === favouriteProduct.name;
+        });
+
+        if (!exists) {
+            favourites.push(favouriteProduct);
+            localStorage.setItem(
+                "favourites",
+                JSON.stringify(favourites)
+            );
+            alert("Added to favourites!")
+        }
+        });
+    });
+
+// DISPLAYING fav page 
+const favouritesList = document.getElementById("favourites-list");
+
+const emptyFavouritesMessage = document.getElementById("empty-favourites-message");
+
+if(favouritesList) {
+    const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+    
+    favouritesList.innerHTML = "";
+    if (favourites.length === 0) {
+        emptyFavouritesMessage.style.display="block";
+    } else {
+        favourites.forEach(function(item) {
+            favouritesList.innerHTML += `
+            <div class="product-card">
+            <a href="${item.link}" class="product-link">
+                <img src="${item.image}" alt="${item.name}">
+            </a>
+
+            <div class="product-info">
+                <p>${item.name}</p>
+                <p>$${item.price}</p>
+            </div
+            </div>
+            `;
+        });
+        }
+    }
