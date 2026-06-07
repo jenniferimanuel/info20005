@@ -756,3 +756,16 @@ footer {
     color: var(--light-purple);
     margin-bottom: 50px;
 }
+
+/* adjusting SALE PRICE on product detail page */
+.original-price {
+    text-decoration: line-through;
+    color: var(--dark-purple);
+    font-size: 0.8em;
+    margin-right: 12px;
+}
+
+.sale-price {
+    color: red;
+    font-size: 20px;
+}
