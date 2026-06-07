@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Gold Blue Long Pyjama Set</title>
+        <link rel="stylesheet" href="pyjama-style.css"/>
+    </head>
+
+    <body>
+        
+        <!--HOME, left top header, desktop view-->
+       <header class="site-header">
+        <nav class="nav-links">
+            <a href="index.html"> <img src="assets/home.png" alt="Home">
+            </a>
+
+                <a href="sets.html" >SETS</a>
+                <span>|</span>
+                <a href="robes.html" >ROBES</a>
+                <span>|</span>
+                <a href="night-dresses.html" >NIGHT DRESSES</a>
+                <span>|</span>
+                <a href="sale.html" >SALE</a>
+            </nav>
+
+        <!--search bar group-->
+         <div class="search-container">
+            <form class="search-form" action="products.html" method="get">
+                <input type="text" id="searchInput" placeholder="Search..." name="search" >
+                <button type="submit" class="search-button">
+                    <img src="assets/search-icon.png" alt="Search">
+                </button>
+            </form>
+         </div>
+
+        <!--HEADER on the TOP RIGHT-->
+        <!--favourite-->
+         <div class="header-icons">
+            <button type="button" class="icon-btn">
+                <img src="assets/favorite.png" alt="favourites">
+            </button>
+        <!--cart-->
+            <a href="shopping-cart.html" class="icon-btn">
+                <img src="assets/cart.png" alt="cart">
+            </a>
+
+         </div>
+        </header>
+
+        <main class="product-detail-page">
+            <div class="product-detail-container">
+
+            <div class="product-detail-image">
+                <img src="assets/set/gold-blue-long-pyjama-set.jpg" alt="gold blue long pyjama set">
+           </div>
+
+            <!--PRODUCT INFO-->
+            <div class="product-detail-info">
+                <h1>Gold Blue Long Pyjama Set</h1>
+
+            <p class="product-price">$89</p>
+
+                <!--Size-->
+                <div class="size-section">
+                        <p>Size</p>
+                    
+                    <div class="size-options">
+                        <button type="button" class="size-btn">XS</button>
+                        <button type="button" class="size-btn">S</button>
+                        <button type="button" class="size-btn">M</button>
+                        <button type="button" class="size-btn">L</button>
+                        <button type="button" class="size-btn">XL</button>
+                    </div>
+                </div>
+
+                <!--Quantity-->
+                <div class="quantity-box">
+                    <button type="button" id="minus-btn">-</button>
+                    <span id="quantity-value">1</span>
+                    <button type="button" id="plus-btn">+</button>
+                </div>
+
+                <!--Add to Cart Button-->
+                <button 
+                class="add-to-cart-button"
+                data-name="Gold Blue Long Pyjama Set"
+                data-price="89"
+                data-image="assets/set/gold-blue-long-pyjama-set.jpg">
+                ADD TO CART</button>
+
+                <!--Description-->
+                <div class="product-description">
+                <h3>Description</h3>
+                <p>A soft blue and gold pajama set designed for comfort, elegance, and relaxed sleepwear styling. </p>
+                </div>
+                <!--Shipping Info-->
+                <div class="shipping-info">
+                <h3>Shipping & Returns</h3>
+                <p>Standard shipping available. Returns accepted within 14 days if the product is unworn.</p>
+                </div>
+
+                </div>
+        </main>
+        
+    <script src="script.js"></script>
+    </body>
+
+</html>
