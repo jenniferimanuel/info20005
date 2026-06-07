@@ -266,7 +266,8 @@ favouriteButtons.forEach(function(button) {
         event.preventDefault();
         const favouriteProduct = {
             name: button.dataset.name,
-            price:button.dataset.image,
+            price:button.dataset.price,
+            image: button.dataset.image,
             link: button.dataset.link
         };
 
