@@ -65,8 +65,23 @@ const cartSubtotal = document.getElementById("cart-subtotal");
 
 if (cartItemsList && cartSubtotal) {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    // if carts empty:
+    const emptyCartMessage = document.getElementById("empty-cart-message");
+
     let subtotal = 0;
     cartItemsList.innerHTML = "";
+    //if carts empty:
+    if (cart.length ===0) {
+       if (emptyCartMessage) {
+        emptyCartMessage.style.display = "block";
+       }
+       cartSubtotal.textContent = "$0";
+        } else {
+
+       if (emptyCartMessage) {
+        emptyCartMessage.style.display = "none";
+       }
+    //cart summary
     cart.forEach(function(item, index) {
         subtotal = subtotal + item.price * item.quantity;
 
@@ -93,6 +108,7 @@ if (cartItemsList && cartSubtotal) {
         `;
     });
     cartSubtotal.textContent = "$" + subtotal;
+    }
 }
 
 //to increase and decrease quantity
