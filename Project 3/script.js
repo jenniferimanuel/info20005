@@ -165,7 +165,7 @@ if (checkoutItems && checkoutTotal) {
     checkoutTotal.textContent = "$" + total;
 }
 
-//fill in container on CHECKOUT page, to prevent user error
+//fill in container on CHECKOUT page
 
 const confirmBtn = document.getElementById("confirm-order");
 
@@ -196,7 +196,7 @@ if (confirmBtn) {
             alert("Please fill in all fields.");
             return;
         }
-
+        //preventing user error:
         //card number = exactly 16 digit
         if (!/^\d{16}$/.test(cardNumber)) {
             alert("Card number must be 16 digits.");
@@ -217,4 +217,27 @@ if (confirmBtn) {
         //Success
         window.location.href = "confirmed.html";
     });
+}
+
+//CONFIRMED PAGE summary
+const confirmedItems = document.getElementById("confirmed-items");
+const confirmedTotal = document.getElementById("confirmed-total");
+
+if(confirmedItems && confirmedTotal) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let total = 0;
+    confirmedItems.innerHTML = "";
+
+    cart.forEach(function(item) {
+        total = total + item.price * item.quantity;
+
+        confirmedItems.innerHTML += `
+        <div class="confirmed-item">
+            <p>${item.name}</p>
+            <p>$${item.price * item.quantity}</p>
+        </div>
+        `
+    ;
+});
+confirmedTotal.textContent = "$" + total;
 }

@@ -689,3 +689,70 @@ footer {
     margin-top: 20px;
 }
 
+/* CONFIRMATION page */
+.confirmed-page{
+    width: 70%;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.confirmed-box {
+    border: 1.5px solid var(--light-purple);
+    border-radius: 20px;
+    padding: 50px 70px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.check-circle-image {
+    width: 220px;
+    height: 220px;
+    display: block;
+    margin: 0 auto 40px;
+}
+
+.confirmed-summary {
+    width: 100;
+}
+
+.confirmed-item,
+.confirmed-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: var(--light-purple);
+}
+
+.confirmed-row {
+    font-weight: bold;
+    font-size: 34px;
+    margin-top: 40px;
+}
+
+.back-home-button{
+    display: inline-block;
+    margin-top: 35px;
+    padding: 12px 45px;
+
+    border: 1.5px solid var(--light-purple);
+    border-radius: 25px;
+
+    text-decoration: none;
+    color: var(--dark-purple);
+    font-weight: bold;
+    font-size: 24px;
+    background: white;
+}
+
+.back-home-button:hover {
+    background: var(--light-purple);
+    color: white;
+}
+
+.confirmed-message {
+    font-size: 24px;
+    color: var(--light-purple);
+    margin-bottom: 50px;
+}
