@@ -301,9 +301,21 @@ if(favouritesList) {
     if (favourites.length === 0) {
         emptyFavouritesMessage.style.display="block";
     } else {
-        favourites.forEach(function(item) {
+
+        if (emptyFavouritesMessage) {
+            emptyFavouritesMessage.style.display = "none";
+        }
+
+        favourites.forEach(function(item, index) {
             favouritesList.innerHTML += `
             <div class="product-card">
+            <button
+                type="button"
+                class="remove-favourite-btn"
+                onclick="removeFavourite(${index})">
+                <img src="assets/x.png" alt="Remove favourite">
+            </button>
+
             <a href="${item.link}" class="product-link">
                 <img src="${item.image}" alt="${item.name}">
             </a>
@@ -311,9 +323,16 @@ if(favouritesList) {
             <div class="product-info">
                 <p>${item.name}</p>
                 <p>$${item.price}</p>
-            </div
+            </div>
             </div>
             `;
-        });
+            });
         }
     }
+        //remove product from fav page
+        function removeFavourite(index) {
+            let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+            favourites.splice(index,1);
+            localStorage.setItem("favourites", JSON.stringify(favourites));
+            location.reload();
+        }

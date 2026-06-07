@@ -768,7 +768,14 @@ footer {
     margin-bottom: 50px;
 }
 
-/* FAVORITE icon on PRODUCT CARD */
+/* FAVORITE PAGE*/
+.favourites-page h1 {
+    margin-bottom: 20px;
+}
+.favourites-page {
+    padding: 0 20px;
+}
+/* FAV BUTTON */
 .favorite-btn {
     position: absolute;
     top: 18px;
@@ -786,4 +793,25 @@ footer {
     width: 34px;
     height: 34px;
     display: block;
+}
+
+/* REMOVE FAV button */
+.remove-favourite-btn {
+    position: absolute;
+    top:12px;
+    right: 12px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.remove-favourite-btn img {
+    width: 22px;
+    height: 22px;
+}
+
+.product-card {
+    position: relative;
 }
