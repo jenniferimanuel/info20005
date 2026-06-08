@@ -286,6 +286,14 @@ footer {
     .product-card img {
         height: 260px;
     }
+    .product-detail-container {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 60px;
+        width: 90%;
+        margin: 60px auto;
+        align-items: start;
+    }
 }
 /* mobile version */
 @media (max-width: 430px) {
@@ -337,32 +345,132 @@ footer {
         font-size: 16px;
     }
     .product-detail-container {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
         gap: 30px;
         width: 90%;
+        margin: 30px auto;
     }
     .product-detail-info {
         max-width: 100%
     }
     .cart-container,
     .checkout-container {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
         gap: 35px;
+        width: 100%;
+        padding: 0px;
+        overflow: hidden;
+        align-items: stretch;
+    }
+    .cart-items,
+    #cart-items-list {
+        width: 100%;
     }
     .cart-item-card {
-        grid-template-columns: 1fr;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 25px 18px !important;
+        overflow: hidden;
+        text-align: center;
+    }
+    .cart-item-info {
+        width: 100% !important;
+        margin: 0 !important;
     }
     .cart-product-image {
-        width: 100% !important;
-        height: 300px !important;
+        width: 180px !important;
+        height: 180px !important;
+        margin: 0 auto 20px;
+        object-fit: cover;
+        display: block;
+    }
+    .cart-quantity {
+        margin: 20px auto 10px;
+    }
+    .cart-summary {
+        width: 100%;
+        max-width: 100%;
     }
     .checkout-page,
     .shopping-cart-page,
     .favourites-page {
-        width: 90%;
+        width: 95%;
         padding: 0;
         margin: 40px auto;
     }
+    .checkout-container {
+        display: block;
+        width: 100%;
+    }
+    .checkout-form-section,
+    .checkout-summary {
+        width: 100%
+    }
+    .checkout-box {
+        width: 100%;
+        padding: 18px;
+        overflow: hidden;
+    }
+    .checkout-box input {
+        width: 100%;
+    }
+    .checkout-top-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .checkout-summary-box {
+        width: 100% !important;
+    }
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+    .confirmed-page {
+        width: 95%;
+        margin: 40px auto;
+    }
+   
+    .confirmed-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center;
+        
+    }
+    .check-circle-image {
+        width: 140px !important;
+        height: 140px !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .confirmed-message {
+        max-width: 280px;
+        margin: 0 auto 40px;
+        font-size: 20px !important;
+        line-height: 1.4;
+    }
+    .confirmed-item p {
+        font-size: 16px !important;
+        white-space: nowrap;
+    }
+    .confirmed-item h2 {
+        font-size: 16px !important;
+    }
+    .confirmed-row {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        font-size: 20px !important;
+        margin-top: 30px;
+    }
+
 }
 
 /* SALE products */
@@ -483,20 +591,19 @@ footer {
 
 .product-detail-container {
     display: grid;
+    grid-template-columns: 420px 1fr;
     gap: 60px;
     width: 90%;
     margin: 60px auto;
     align-items: start;
-    grid-template-columns: 420px 1fr;
 }
 
 .product-detail-image img{
     width:100%;
-    border-radius:20px;
 }
 
 .product-detail-info {
-   max-width: 550px;
+   max-width: 100%;
 }
 
 .quantity-box {
@@ -514,11 +621,7 @@ footer {
     display: grid;
     gap: 30px;
     align-items: center;
-    border:2px solid var(--light-purple);
-    border-radius: 20px;
-    padding: 25px;
 }
-
 #cart-image{
     width: 180px;
     height: 180px;
@@ -547,8 +650,9 @@ footer {
 
 .cart-container {
     display: grid;
-    flex-direction: column;
-    gap: 40px;
+    gap: 30px;
+    align-items: start;
+
 }
 
 /* left cart box */
